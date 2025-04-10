@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark L. Yangson - Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5ebe0;
+            color: #333;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        header {
+            width: 100%;
+            text-align: left;
+            padding: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #d6c3a5;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+            margin-bottom: 50px;
+            opacity: 0;
+            animation: slideIn 0.5s 0.2s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 5px solid #d6c3a5;
+        }
+
+        .profile-content {
+            flex: 1;
+            padding-top: 20px;
+        }
+
+        .greeting {
+            font-family: 'Playfair Display', serif;
+            font-size: 5em;
+            margin: 0 0 25px 0;
+            text-transform: uppercase;
+            color: #333;
+            transition: color 0.2s ease;
+            opacity: 0;
+            animation: fadeInText 0.5s 0.5s forwards;
+        }
+
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .greeting:hover {
+            color: #d6c3a5;
+        }
+
+        .description {
+            font-size: 1.8em;
+            line-height: 1.7;
+            white-space: pre;
+            margin: 0 0 40px 0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: flex-start;
+        }
+
+        .buttons a {
+            text-decoration: none;
+        }
+
+        .buttons button {
+            background-color: #d6c3a5;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 8px;
+            font-size: 1.4em;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            font-weight: 500;
+            opacity: 0;
+            animation: buttonFadeIn 0.5s 1s forwards;
+        }
+
+        @keyframes buttonFadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .buttons button:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .social-icons p {
+            font-size: 1.8em;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .social-icons img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 2px solid #d6c3a5;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-pic {
+                width: 200px;
+                height: 200px;
+            }
+
+            .greeting {
+                font-size: 3em;
+            }
+
+            .description {
+                font-size: 1.5em;
+            }
+
+            .buttons button {
+                font-size: 1.2em;
+                padding: 12px 25px;
+            }
+
+            .social-icons p {
+                font-size: 1.5em;
+            }
+
+            .social-icons img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        /* Media Queries for Smaller Mobile Devices */
+        @media (max-width: 480px) {
+            .profile-pic {
+                width: 180px;
+                height: 180px;
+            }
+
+            .greeting {
+                font-size: 2.5em;
+            }
+
+            .description {
+                font-size: 1.3em;
+            }
+
+            .buttons button {
+                font-size: 1.1em;
+                padding: 10px 20px;
+            }
+
+            .social-icons p {
+                font-size: 1.3em;
+            }
+
+            .social-icons img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MARK L. YANGSON</h1>
+            <img src="pictures/logo.jpg" alt="Logo" class="logo">
+        </header>
+
+        <div class="profile-container">
+            <img src="pictures/me.jpg" alt="Mark L. Yangson" class="profile-pic">
+            
+            <div class="profile-content">
+                <h2 class="greeting">HELLO,</h2>
+                <p class="description">Hello, I'm a BSIT student with experience in coding, web development,
+and IT-related tasks. I'm always eager to learn and 
+explore new areas in technology to expand my skills.</p>
+                <div class="buttons">
+                    <a href="education.html"><button>Education</button></a>
+                    <a href="contact.html"><button>Contacts</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <p>Follow me on:</p>
+            <a href="https://www.facebook.com/commitsuicideattheageof21" target="_blank"><img src="pictures/facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/yangson_mark?t=203LDBNMNAQbnwp3CxyB8g&s=09" target="_blank"><img src="pictures/X logo.jpg" alt="X"></a>
+            <a href="https://instagram.com/schizopreniamark" target="_blank"><img src="pictures/instagram.jpg" alt="Instagram"></a>
+        </div>
+    </div>
+</body>
+</html>
